@@ -20,6 +20,16 @@ public class TC140_AccessVehicleContract extends TestBase {
     @Test
     public void VehicleContractPage(){
 
+        //Open browser,Login as salesmanager
+        LoginPage loginPage = new LoginPage();
+        loginPage.loginAsSalesManager();
+
+        //Go to 'Dashboard View' page,
+        // Move on the  'Fleet' module,
+        //Click on 'Vehicle Contracts' option
+        DashboardPage dashboardPage = new DashboardPage();
+        dashboardPage.navigateToModule("Fleet", "Vehicle Contracts");
+
 
     }
 

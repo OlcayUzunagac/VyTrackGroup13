@@ -64,17 +64,6 @@ public class TestBase {
         actions = new Actions(driver);
         wait = new WebDriverWait(driver,10);
         driver.get(ConfigurationReader.get("url"));
-
-        //Open browser,Login as salesmanager
-        LoginPage loginPage = new LoginPage();
-        loginPage.loginAsSalesManager();
-
-        //Go to 'Dashboard View' page,
-        // Move on the  'Fleet' module,
-        //Click on 'Vehicle Contracts' option
-        DashboardPage dashboardPage = new DashboardPage();
-        dashboardPage.navigateToModule("Fleet", "Vehicle Contracts");
-
     }
 
     @AfterMethod

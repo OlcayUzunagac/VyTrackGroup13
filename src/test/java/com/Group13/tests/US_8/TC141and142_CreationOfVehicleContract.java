@@ -1,8 +1,6 @@
 package com.Group13.tests.US_8;
 
-import com.Group13.pages.ContractInfoPage;
-import com.Group13.pages.CreateVehicleContractPage;
-import com.Group13.pages.AllVehicleContractPage;
+import com.Group13.pages.*;
 import com.Group13.tests.TestBase;
 import com.Group13.utilities.BrowserUtils;
 import org.openqa.selenium.WebElement;
@@ -34,6 +32,15 @@ public class TC141and142_CreationOfVehicleContract extends TestBase {
     @Test(dataProvider = "contract")
     public void CreatVehicleContract(String responsible, String activationCost, String costAmount, String odometer,
                                      String invoiceDate, String  startDate, String expirationDate,   String  vendor, String Driver, String reference, String termsAndConditions) throws InterruptedException {
+        //Open browser,Login as salesmanager
+        LoginPage loginPage = new LoginPage();
+        loginPage.loginAsSalesManager();
+
+        //Go to 'Dashboard View' page,
+        // Move on the  'Fleet' module,
+        //Click on 'Vehicle Contracts' option
+        DashboardPage dashboardPage = new DashboardPage();
+        dashboardPage.navigateToModule("Fleet", "Vehicle Contracts");
 
         extentLogger = report.createTest("Creation of Vehicle Contract");
         AllVehicleContractPage vehicleContractsPage = new AllVehicleContractPage();
@@ -137,12 +144,8 @@ public class TC141and142_CreationOfVehicleContract extends TestBase {
         extentLogger.info("Get the number of Pages");
         System.out.println("vehicleContractsPage.numberOfPage.getText() = " + vehicleContractsPage.numberOfPage.getText());
         String numberOfPage = vehicleContractsPage.numberOfPage.getText();
-
-
         String [] pagenumber = numberOfPage.split(" ");
-
         System.out.println("Arrays.toString(pagenumber) = " + Arrays.toString(pagenumber));
-
         int number = Integer.parseInt(pagenumber[1]);
         System.out.println("number = " + number);
 

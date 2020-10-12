@@ -54,6 +54,7 @@ public class CreateCalendarEventsPage extends BasePage {
 
 
     public Select repeatOptionsList(){
+
         return new Select(repeatOptions);
     }
 

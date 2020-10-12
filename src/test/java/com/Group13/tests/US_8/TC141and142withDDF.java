@@ -1,8 +1,6 @@
 package com.Group13.tests.US_8;
 
-import com.Group13.pages.ContractInfoPage;
-import com.Group13.pages.CreateVehicleContractPage;
-import com.Group13.pages.AllVehicleContractPage;
+import com.Group13.pages.*;
 import com.Group13.tests.TestBase;
 import com.Group13.utilities.BrowserUtils;
 import com.Group13.utilities.ExcelUtil;
@@ -30,6 +28,16 @@ public class TC141and142withDDF extends TestBase {
 
     @Test(dataProvider = "data")
     public void test1(String responsible, String activationCost, String costAmount, String odometer, String  vendor, String Driver, String reference, String termsAndConditions) throws InterruptedException {
+
+        //Open browser,Login as salesmanager
+        LoginPage loginPage = new LoginPage();
+        loginPage.loginAsSalesManager();
+
+        //Go to 'Dashboard View' page,
+        // Move on the  'Fleet' module,
+        //Click on 'Vehicle Contracts' option
+        DashboardPage dashboardPage = new DashboardPage();
+        dashboardPage.navigateToModule("Fleet", "Vehicle Contracts");
 
         extentLogger = report.createTest("Creation of Vehicle Contract");
         AllVehicleContractPage vehicleContractsPage = new AllVehicleContractPage();
