@@ -59,12 +59,12 @@ public class TC_4 extends TestBase {
             BrowserUtils.waitFor(2);
 
         }
+
         System.out.println(totalSizeOfRows);
         String str = String.valueOf(totalSizeOfRows);
         Assert.assertEquals(str,"1732", "verify number of records");
 
         extentLogger.pass("PASS");
-
 
     }
 }

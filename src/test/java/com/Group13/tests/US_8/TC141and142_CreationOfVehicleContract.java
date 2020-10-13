@@ -134,8 +134,6 @@ public class TC141and142_CreationOfVehicleContract extends TestBase {
         Assert.assertEquals(contractInfoPage.getHeaderOfContract(responsible+" "+vendor+" "+ Driver+" "+reference).getText(),responsible+" "+vendor+" "+ Driver+" "+reference,"verify header");
 
 
-        //burdan sonrasina calis, ademe sor
-
         extentLogger.info("Go to All Vehicle Contract Page");
         BrowserUtils.clickWithJS(contractInfoPage.vehicleContractLink);
         BrowserUtils.waitFor(2);
@@ -167,7 +165,7 @@ public class TC141and142_CreationOfVehicleContract extends TestBase {
         Thread.sleep(3000);
 
 
-        extentLogger.pass("TC 141 is PASSED");
+        extentLogger.pass("TC-141 and TC-142 is PASSED");
 
 
     }
