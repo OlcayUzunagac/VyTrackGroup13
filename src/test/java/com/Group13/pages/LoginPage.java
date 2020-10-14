@@ -44,6 +44,7 @@ public class LoginPage {
         loginBtn.click();
     }
 
+
     public void loginAsStoreManager(){
 
         String username = ConfigurationReader.get("storemanager_username");
@@ -53,7 +54,7 @@ public class LoginPage {
         passwordInput.sendKeys(password);
         loginBtn.click();
     }
-    public void loginAsdriver(){
+    public void loginAsDriver(){
 
         String username = ConfigurationReader.get("driver_username");
         String password = ConfigurationReader.get("driver_password");
@@ -62,6 +63,7 @@ public class LoginPage {
         passwordInput.sendKeys(password);
         loginBtn.click();
     }
+
     public void loginAsSalesManager(){
 
         String username = ConfigurationReader.get("salesmanager_username");
