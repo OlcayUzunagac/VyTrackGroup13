@@ -33,5 +33,7 @@ public class TC_147_DeleteContract extends TestBase {
         BrowserUtils.waitFor(3);
         Assert.assertTrue(allVehicleContractPage.vehicleConractDeletedMessage.isDisplayed());
 
+        extentLogger.pass("PASS");
+
     }
 }
