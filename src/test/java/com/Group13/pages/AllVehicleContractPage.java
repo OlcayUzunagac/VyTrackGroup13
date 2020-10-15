@@ -14,8 +14,12 @@ public class AllVehicleContractPage extends BasePage {
     //@FindBy(xpath = "//a[@title='Create Vehicle Contract']")
     //public WebElement CreateVehicleContractBtn;
 
+
     @FindBy(css = "[class='btn main-group btn-primary pull-right ']")
     public WebElement createVehicleContract;
+
+    @FindBy(xpath = "(//tbody//td)[2]")
+    public WebElement firstLine;
 
     @FindBy(xpath = "//i[contains(text(),'Next')]")
     public WebElement nextButton;
@@ -74,6 +78,9 @@ public class AllVehicleContractPage extends BasePage {
 
     @FindBy(xpath = "(//tbody//td/input)[1]")
     public WebElement idChecked;
+
+    @FindBy(css= "div.flash-messages-holder")
+    public WebElement vehicleConractDeletedMessage;
 
 
 

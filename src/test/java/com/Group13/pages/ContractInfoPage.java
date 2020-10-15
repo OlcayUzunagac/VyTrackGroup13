@@ -20,4 +20,10 @@ public class ContractInfoPage extends BasePage{
 
     @FindBy(xpath = "//div[contains(text(),'Schumaher')]")
     public WebElement nameOfResponsible;
+
+    @FindBy(xpath= "//div[@class='pull-left btn-group icons-holder'][2]")
+    public WebElement deleteButton;
+
+    @FindBy(xpath = "//a[.='Yes, Delete']")
+    public WebElement yesDelete;
 }
