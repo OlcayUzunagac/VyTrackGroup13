@@ -9,12 +9,12 @@ import com.Group13.utilities.BrowserUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_147_DeleteContract extends TestBase {
+public class TC_148_MoreActionOnVehicleContract extends TestBase {
 
     @Test
-    public void TC_147(){
+    public void testCase_148(){
 
-        extentLogger = report.createTest("Test Case 147_Deleting a VehicleContract");
+        extentLogger = report.createTest("Test Case 148, make more action on Vehicle Contract");
         LoginPage loginPage = new LoginPage();
         loginPage.loginAsSalesManager();
         DashboardPage dashboardPage = new DashboardPage();
@@ -23,17 +23,18 @@ public class TC_147_DeleteContract extends TestBase {
         BrowserUtils.waitFor(3);
         allVehicleContractPage.firstLine.click();
 
-        extentLogger.info("click delete button");
+        extentLogger = report.createTest("Click more actions button and see the other options");
         ContractInfoPage contractInfoPage = new ContractInfoPage();
         BrowserUtils.waitFor(3);
-        contractInfoPage.deleteButton.click();
+        contractInfoPage.moreActions.click();
+        String addAttachmentText = contractInfoPage.addAttachment.getText();
+        String addEventText = contractInfoPage.addEvent.getText();
+        String addNoteText = contractInfoPage.addNote.getText();
 
-        extentLogger.info("confirm deleting and see the message on the Screen 'Vehicle Contract deleted");
-        contractInfoPage.yesDelete.click();
-        BrowserUtils.waitFor(3);
-        Assert.assertTrue(allVehicleContractPage.vehicleConractDeletedMessage.isDisplayed());
+        Assert.assertEquals(addAttachmentText,"Add Attachment");
+        Assert.assertEquals(addEventText,"Add Event");
+        Assert.assertEquals(addNoteText,"Add Note");
 
-        extentLogger.pass("PASS");
 
     }
 }
