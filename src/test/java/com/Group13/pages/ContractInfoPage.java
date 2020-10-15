@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class ContractInfoPage extends BasePage{
 
     @FindBy(xpath = "//h1[@class='user-name'][contains(text(),'Mike Smith Mclaren Hamilton 25250')]")
@@ -26,4 +28,19 @@ public class ContractInfoPage extends BasePage{
 
     @FindBy(xpath = "//a[.='Yes, Delete']")
     public WebElement yesDelete;
+
+    @FindBy(css = "a.btn.dropdown-toggle")
+    public WebElement moreActions;
+
+
+    @FindBy(css = "i.fa-paperclip.hide-text")
+    public WebElement addAttachment;
+
+    @FindBy(css = "i.fa-comment-o.hide-text")
+    public WebElement addNote;
+
+    @FindBy(css = "i.fa-clock-o.hide-text")
+    public WebElement addEvent;
+
+
 }
