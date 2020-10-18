@@ -32,7 +32,6 @@ public class ContractInfoPage extends BasePage{
     @FindBy(css = "a.btn.dropdown-toggle")
     public WebElement moreActions;
 
-
     @FindBy(css = "i.fa-paperclip.hide-text")
     public WebElement addAttachment;
 
@@ -41,6 +40,9 @@ public class ContractInfoPage extends BasePage{
 
     @FindBy(css = "i.fa-clock-o.hide-text")
     public WebElement addEvent;
+
+    @FindBy(css = "div[id*='uniform-oro_attachment_file_file-uid']")
+    public WebElement chooseFile;
 
 
 }

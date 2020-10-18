@@ -48,6 +48,9 @@ public class CalendarEventsPage extends BasePage {
     @FindBy(xpath = "//*[@type='checkbox']")
     public WebElement checkBox;
 
+    @FindBy(xpath = "//label[@class='dib'][3]")
+    public WebElement RecordsNumber;
+
 
     @FindBy(xpath = "(//tbody//td/input)[1]")
     public WebElement rowsCheckBox;

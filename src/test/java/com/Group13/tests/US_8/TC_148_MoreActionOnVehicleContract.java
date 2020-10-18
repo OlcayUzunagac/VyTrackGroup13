@@ -6,6 +6,7 @@ import com.Group13.pages.DashboardPage;
 import com.Group13.pages.LoginPage;
 import com.Group13.tests.TestBase;
 import com.Group13.utilities.BrowserUtils;
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -34,6 +35,22 @@ public class TC_148_MoreActionOnVehicleContract extends TestBase {
         Assert.assertEquals(addAttachmentText,"Add Attachment");
         Assert.assertEquals(addEventText,"Add Event");
         Assert.assertEquals(addNoteText,"Add Note");
+
+        contractInfoPage.addAttachment.click();
+        BrowserUtils.waitFor(3);
+
+        String projectPath = System.getProperty("user.dir");
+        String filePath="src/test/resources/Vehicle Contract.png";
+        String fullPath=projectPath+filePath;
+
+        contractInfoPage.chooseFile.click();
+        contractInfoPage.chooseFile.sendKeys(fullPath);
+
+
+
+
+
+
 
 
     }
