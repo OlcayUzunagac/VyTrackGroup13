@@ -19,8 +19,8 @@ public class TC_1 extends TestBase {
         loginPage.loginAsDriver();
 
         DashboardPage dashboardPage = new DashboardPage();
-        dashboardPage.navigateToModule("Fleet", "Vehicle Fuel Logs");
-
+        dashboardPage.navigateToModule("Fleet", "Vehicles Fuel Logs");
+        Thread.sleep(5000);
 
         VehicleFuelLogsPage vehicleFuelLogsPage = new VehicleFuelLogsPage();
         System.out.println(vehicleFuelLogsPage.getPageSubTitle());
