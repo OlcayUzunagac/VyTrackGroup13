@@ -42,20 +42,22 @@ public class TC_148_MoreActionOnVehicleContract extends TestBase {
         Assert.assertEquals(addNoteText,"Add Note");
         BrowserUtils.waitFor(3);
 
-        contractInfoPage.moreActions.click();
-
-
+       
 
         BrowserUtils.waitFor(3);
+
+        //contractInfoPage.addAttachment.click();
+
+
 
         String projectPath = System.getProperty("user.dir");
         String filePath="src/test/resources/Vehicle Contract.png";
         String fullPath=projectPath+filePath;
 
         //add Attachment, is not working...fix it
-       // contractInfoPage.chooseFile.sendKeys(fullPath);
+        contractInfoPage.chooseFile.sendKeys(fullPath);
 
-        contractInfoPage.addNote.sendKeys("hello world");
+       // contractInfoPage.addNote.sendKeys("hello world");
 
 
 
