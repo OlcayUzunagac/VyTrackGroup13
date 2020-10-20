@@ -25,12 +25,7 @@ public class TC_1 extends TestBase {
         VehicleFuelLogsPage vehicleFuelLogsPage = new VehicleFuelLogsPage();
         System.out.println(vehicleFuelLogsPage.getPageSubTitle());
 
-
-
         System.out.println(vehicleFuelLogsPage.fuelLogInformation.getText());
-
-
-
 
         String actualSubtitle = vehicleFuelLogsPage.getPageSubTitle();
         String expectedSubtitle = "Vehicle Fuel Logs";
