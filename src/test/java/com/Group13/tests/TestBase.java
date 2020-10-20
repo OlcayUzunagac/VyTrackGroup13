@@ -1,7 +1,5 @@
 package com.Group13.tests;
 
-import com.Group13.pages.DashboardPage;
-import com.Group13.pages.LoginPage;
 import com.Group13.utilities.BrowserUtils;
 import com.Group13.utilities.ConfigurationReader;
 import com.Group13.utilities.Driver;
@@ -12,7 +10,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -21,7 +22,7 @@ public class TestBase {
     protected WebDriver driver;
     protected Actions actions;
     protected WebDriverWait wait;
-
+//added smth
     protected ExtentReports report;
     protected ExtentHtmlReporter htmlReporter;
     protected ExtentTest extentLogger;

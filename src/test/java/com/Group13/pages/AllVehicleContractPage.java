@@ -1,10 +1,7 @@
 package com.Group13.pages;
 
-import com.Group13.utilities.Driver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.annotations.Test;
 
 import java.util.List;
 
@@ -13,6 +10,7 @@ public class AllVehicleContractPage extends BasePage {
 
     //@FindBy(xpath = "//a[@title='Create Vehicle Contract']")
     //public WebElement CreateVehicleContractBtn;
+    //added commit
 
 
     @FindBy(css = "[class='btn main-group btn-primary pull-right ']")
