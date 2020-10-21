@@ -15,5 +15,4 @@ public class VehicleServicesLogs extends BasePage {
 
     @FindBy(xpath = "//div/a[@title='Create Vehicle Services Logs']")
     public WebElement with;
-
-}
+    }
