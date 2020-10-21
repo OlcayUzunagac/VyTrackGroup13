@@ -22,33 +22,7 @@ public class TC_1 {
         Thread.sleep(15000);
     }
 
-
-
-
-        //2.Verify that non authorised user should Not be able to access Vehicle service log
-    // (non authorise:Store manager, sales manager )
-    @Test
-    public void VytrackTC109() throws InterruptedException {
-        LoginPage loginPage = new LoginPage();
-
-        loginPage.loginAsStoreManager();
-
-        DashboardPage dashboardPage = new DashboardPage();
-
-        dashboardPage.navigateToModule("Fleet", "Vehicle Services Logs");
-
-        Thread.sleep(15000);
-    }
-    @Test
-    public void VytrackTC2109() throws InterruptedException {
-        LoginPage loginPage = new LoginPage();
-
-        loginPage.loginAsSalesManager();
-
-        DashboardPage dashboardPage = new DashboardPage();
-
-        dashboardPage.navigateToModule("Fleet", "Vehicle Services Logs");
-
-        Thread.sleep(15000);
-    }
 }
+
+
+
