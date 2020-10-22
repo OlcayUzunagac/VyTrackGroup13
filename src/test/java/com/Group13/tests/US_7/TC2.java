@@ -14,6 +14,7 @@ public class TC2 extends TestBase {
     @Test
     public void TC2(){
         System.out.println();
+        //
     }
 
 }
